@@ -183,7 +183,7 @@ void getDist1(){
 ![Alt text](https://osoyoo.com/wp-content/uploads/2018/09/hc-sr04.png?raw=true "HC-SR04 Function")
 
 
-Here's the complete Arduino Program. You may copy it and save it as `DIY-Alcohol-Auto-Dispenser.ino`.
+Here's the complete Arduino Program. You may copy it and save it as `Alcohol_Dispenser.ino`.
 
 ```c
 //----ULTRASONIC SENSOR CONFIGURATION----//
@@ -259,11 +259,17 @@ In Windows OS, it is in `COMx`, where x is the port number. The serial number of
 
 ![Alt text](https://support.arduino.cc/hc/article_attachments/360016531980/COM_port_changes_3.png?raw=true "Device Manager")
 
-![Alt Text](https://www.makerspaces.com/wp-content/uploads/2017/02/select-arduino-port.png?raw=true "Setting the Port in Arduino Uno")
+![Alt Text](https://www.makerspaces.com/wp-content/uploads/2017/02/select-arduino-port.png?raw=true "Setting the Port to Arduino Uno on Windows OS")
 
-In Mac OS or Linux, it is in `/dev/ttyACM0` for **Arduino Uno**, and `/dev/ttyUSB0` for **GizDuino SE**. 
+In Mac or Linux OS, it is in `/dev/ttyACM0` for **Arduino Uno**, and `/dev/ttyUSB0` for **GizDuino SE**. 
 
+![Alt Text](https://support.arduino.cc/hc/article_attachments/360016532060/COM_port_changes_4.png?raw=true "Setting the Port to Arduino Uno Mac/Linux OS")
 
 Then, let's set the board into Arduino Uno. 
 ![Alt Text](https://www.makerspaces.com/wp-content/uploads/2017/02/select-arduino-board.png?raw=true "Setting the Board")
+
+
+7. Now, you may press `ctrl + U` or click the `Upload` button, as seen on the image below, to upload the program to Arduino Uno. Then it will be prompted as `Done Uploading`, if it is successfully uploaded.
+
+![Alt text](images/upload.PNG?raw=true "Successfull uploading")
 
