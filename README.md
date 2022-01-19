@@ -36,7 +36,7 @@ This section discusses the schematic diagram and how to assemble the circuit of 
 
 1. Connect the HC-SR04 Ultrasonic Distance Sensor. the following pin configuration should be connected to each other.
 
-|**HC-SR04**|**MCU**|
+|**HC-SR04**|**Arduino**|
 | -----   | ------------ |
 | Vcc     | 5V           |
 | GND     | GND          |
@@ -44,6 +44,28 @@ This section discusses the schematic diagram and how to assemble the circuit of 
 | Echo    | A4           |
 
 ![Alt text](images/hc-sr04.png?raw=true "HC-SR04 Connection")
+
+2. Connect the Driver Circuit to the Arduino. The connection of electronic components to **TIP32C** and **Arduino** are seen on the table provided below. Then, connect the `GND` of all devices. 
+
+|**TIP32C** |    **Connected To**      |
+| -----     | ------------------------ |
+| Base      | 1k Ohms Resistor -> A0   |
+| Collector | +5V of DC Water Pump     |
+| Emitter   | +5V of 9V-to-5V converter|
+
+![Alt text](images/Driver.PNG?raw=true "Driver Circuit")
+
+> :warning: **WARNING:**
+> Make sure you connect `1k Ohms Resistor` to the **Base** of **TIP32C** before connecting it to `pin A0` of **Arduino**
+
+
+3. Connect the 9 Volts Battery to the Circuit.
+
+> :warning: **WARNING:**
+> To see it functioning, make sure you upload the program through the Arduino IDE, which will be discussed on the next part of this guide.
+
+![Alt text](images/battery.png?raw=true "9 Volts battery connection")
+
 
 
 ## Software Requirement
