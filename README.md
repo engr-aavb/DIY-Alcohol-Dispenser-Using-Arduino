@@ -53,10 +53,12 @@ This section discusses the schematic diagram and how to assemble the circuit of 
 | Collector | +5V of DC Water Pump     |
 | Emitter   | +5V of 9V-to-5V converter|
 
-![Alt text](images/Driver.PNG?raw=true "Driver Circuit")
-
 > :warning: **WARNING:**
 > Make sure you connect `1k Ohms Resistor` to the **Base** of **TIP32C** before connecting it to `pin A0` of **Arduino**
+
+![Alt text](images/Driver.PNG?raw=true "Driver Circuit")
+
+
 
 
 3. Connect the 9 Volts Battery to the Circuit.
@@ -75,4 +77,15 @@ On this guide, you will use Arduino IDE. Download the IDE on this [link](https:/
 ![Alt text](images/Arduino.png?raw=true "Arduino IDE Download")
 
 
+> :warning: **WARNING:**
+> _**If you are using Windows 10**_.    
+> Do _**NOT**_ install the Arduino IDE from the Microsoft App Store. Install the original Arduino IDE from the Arduino official website. The Arduino app from the Microsoft App Store has problems using third-party Board Support Packages.
 
+
+1. Open the Arduino IDE. You will see a bare minimum program file opened. It is written using [C++ Language](https://www.w3schools.com/cpp/cpp_intro.asp#:~:text=C%2B%2B%20is%20a%20cross%2Dplatform,over%20system%20resources%20and%20memory.), since most of microcontrollers' programming languages are related to C++. 
+
+- `void setup()` is a function in Arduino IDE where it will run the program once.
+- `void loop()` is a function in Arduino IDE where it will run the program on a loop.
+- Before the `void setup()`, you may initialize data types such as `int`, `float`, `double`, etc.
+
+![Alt text](images/ArduinoIDE1.PNG?raw=true "Arduino IDE Bare Minimum")
