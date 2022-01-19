@@ -24,6 +24,12 @@ This kit contains the following components:
 - 1x Prototyping board
 
 
+### Schematic Diagram
+
+![Alt text](images/Alcohol.Sanitizer.drawio.final.png?raw=true "Arduino IDE Download")
+
 ## Software Requirement
 On this guide, you will use Arduino IDE. Download the IDE on this [link](https://www.arduino.cc/en/software), depending on your Computer's Operating System.
+
+
 ![Alt text](images/Arduino.png?raw=true "Arduino IDE Download")
