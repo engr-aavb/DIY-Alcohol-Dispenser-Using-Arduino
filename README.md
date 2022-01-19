@@ -269,7 +269,22 @@ Then, let's set the board into Arduino Uno.
 ![Alt Text](https://www.makerspaces.com/wp-content/uploads/2017/02/select-arduino-board.png?raw=true "Setting the Board")
 
 
-7. Now, you may press `ctrl + U` or click the `Upload` button, as seen on the image below, to upload the program to Arduino Uno. Then it will be prompted as `Done Uploading`, if it is successfully uploaded.
+7. Now, you may press `ctrl + u` or click the `Upload` button, as seen on the image below, to upload the program to Arduino Uno. Then it will be prompted as `Done Uploading`, if it is successfully uploaded.
 
 ![Alt text](images/upload.PNG?raw=true "Successfull uploading")
 
+8. You may use the Serial Monitor, by pressing `ctrl + shift + m`, or going to **Tools > Serial Monitor ** to see the actual data reading of HC-SR04. You may now use the `DIY-Alcohol-Auto-Dispenser` by assembling it with an Alcohol Container.
+
+```
+30.31
+29.60
+10.21
+8.43
+4.77
+PUMP ON
+PUMP OFF
+10.55
+11.23
+```
+
+![Alt Text](https://hackster.imgix.net/uploads/attachments/1100148/FVORFUDK8WIIJM3.jpg?raw=true "Alcohol Dispenser")
