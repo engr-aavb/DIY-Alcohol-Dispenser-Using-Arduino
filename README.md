@@ -60,12 +60,8 @@ This section discusses the schematic diagram and how to assemble the circuit of 
 > :warning: **WARNING:**
 > - To see it functioning, make sure you upload the program through the Arduino IDE, which will be discussed on the next part of this guide.
 
-![Alt text](images/battery.png?raw=true "9 Volts battery connection")
-
-
 Here's the Complete Schematic Diagram.
 ![Alt text](images/Alcohol.Sanitizer.drawio.final.png?raw=true "DIY Alcohol Auto Dispenser Schematic Diagram")
-
 
 ## Software Requirement
 On this guide, you will use Arduino IDE. Download the IDE on this [link](https://www.arduino.cc/en/software), depending on your Computer's Operating System.
@@ -186,7 +182,73 @@ void getDist1(){
 
 ![Alt text](https://osoyoo.com/wp-content/uploads/2018/09/hc-sr04.png?raw=true "HC-SR04 Function")
 
-6. Now the program is complete, let's upload the program. Make Sure the Serial Port is set to the location of the Arduino Port. 
+
+Here's the complete Arduino Program. You may copy it and save it as `DIY-Alcohol-Auto-Dispenser.ino`.
+
+```c
+//----ULTRASONIC SENSOR CONFIGURATION----//
+const int trigPin1 = A3; //Set trigger pin to A3
+const int echoPin1 = A4; //Set echo pin to A4
+float distanceCm1; //Handling the distance in Centimeters
+float duration1; //Handling the time duration of Ultrasonic Frequency
+//------------end of init----------------//
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(trigPin1, OUTPUT); // Sets the trigPin as an OUTPUT
+  pinMode(echoPin1, INPUT); // Sets the echoPin as an INPUT
+  pinMode(A0, OUTPUT); // Sets the A0 as an OUTPUT
+  digitalWrite(A0,HIGH); //needed to be set HIGH due to PNP Transistor was used for Driver Circuit
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+ 
+  getDist1();                     //function for getting the distance measured by the ultrasonic sensor
+  Serial.println(distanceCm1,2);  //Display the measured distance in cm
+
+  
+  while(Serial.available())
+  {
+    
+    char srx=Serial.read();      //Serial Communication (Receive data from the Serial)
+    if (srx=='p'){
+      pumps();                   // this will be performed when a char 'p' was read from the serial
+    }
+  }
+  
+  if(distanceCm1<=5){
+    pumps();                     // this will be performed when distance from the Ultrasonic Sensor <= 5cm
+  }
+}
+
+void pumps(){
+  
+  Serial.println("PUMP ON");
+  digitalWrite(A0,LOW);          //Activating Pump
+  delay(1000);                   //Activating for 1 Second, 1000 ms = 1 Second
+  digitalWrite(A0,HIGH);         //Deactivating Pump
+  Serial.println("PUMP OFF");    
+}
+
+void getDist1(){
+  //Getting the distance from the Ultrasonic Sensor
+
+
+  digitalWrite(trigPin1, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin1, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin1, LOW);
+  duration1 = pulseIn(echoPin1, HIGH);   //Measuring the time duration of the signal using pulseIn
+  distanceCm1= duration1*0.034/2;        //Conversion of pulseIn to actual measurement in centimeters
+}
+
+```
+
+6. Now the program is complete, let's upload the program. Make sure the `Serial Port` is set to the location of the Arduino Port. 
 
 > **Note**: 
 > - GizDuino SE may not be recognized in some Windows OS. You may download the [CH340 USB driver](https://drive.google.com/drive/folders/1OdKkHaLvMXNtWAbDbR_Zf8WIaAFE65Ai?usp=sharing) and click the `SETUP.EXE` to install.
