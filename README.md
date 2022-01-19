@@ -25,10 +25,10 @@ This kit contains the following components:
 
 On this guide, you will use [HC-SR04 Ultrasonic Distance Sensor](https://www.e-gizmo.net/oc/index.php?route=product/product&search=hc-s&product_id=1385&search=hc-s) as the sensing device to trigger the DC Water Pump. 
 
+![Alt text](https://hackster.imgix.net/uploads/attachments/991537/uploads2ftmp2f95250d93-b617-40b9-956c-3294973543a02fultrasonic428229_UYEDpDPTPU.png?auto=compress%2Cformat&w=1280&h=960&fit=max?raw=true "HC-SR04 Specifications")
+
 ### Schematic Diagram
 This section discusses the schematic diagram and how to assemble the circuit of the DIY Alcohol Auto Dispenser.
-
-![Alt text](images/Alcohol.Sanitizer.drawio.final.png?raw=true "DIY Alcohol Auto Dispenser Schematic Diagram")
 
 1. Connect the HC-SR04 Ultrasonic Distance Sensor. the following pin configuration should be connected to each other.
 
@@ -64,7 +64,7 @@ This section discusses the schematic diagram and how to assemble the circuit of 
 
 
 Here's the Complete Schematic Diagram.
-![Alt text](https://hackster.imgix.net/uploads/attachments/991537/uploads2ftmp2f95250d93-b617-40b9-956c-3294973543a02fultrasonic428229_UYEDpDPTPU.png?auto=compress%2Cformat&w=1280&h=960&fit=max?raw=true "HC-SR04 Specifications")
+![Alt text](images/Alcohol.Sanitizer.drawio.final.png?raw=true "DIY Alcohol Auto Dispenser Schematic Diagram")
 
 
 ## Software Requirement
@@ -188,10 +188,12 @@ void getDist1(){
 
 6. Now the program is complete, let's upload the program. Make Sure the Serial Port is set to the location of the Arduino Port. 
 
-In Windows OS, it is in `COMx`, where x is the port number. The serial number of an Arduino board differs depending to the mode the board is functioning on. For example, on bootloader mode the serial number presented to Windows' `Device Manager` is different to the serial number of the board when it is on application mode.
-
 > **Note**: 
 > - GizDuino SE may not be recognized in some Windows OS. You may download the [CH340 USB driver](https://drive.google.com/drive/folders/1OdKkHaLvMXNtWAbDbR_Zf8WIaAFE65Ai?usp=sharing) and click the `SETUP.EXE` to install.
+
+![Alt text](images/setup.PNG?raw=true "Arduino IDE Bare Minimum")
+
+In Windows OS, it is in `COMx`, where x is the port number. The serial number of an Arduino board differs depending to the mode the board is functioning on. For example, on bootloader mode the serial number presented to Windows' `Device Manager` is different to the serial number of the board when it is on application mode.
 
 ![Alt text](https://support.arduino.cc/hc/article_attachments/360016531980/COM_port_changes_3.png?raw=true "Device Manager")
 
