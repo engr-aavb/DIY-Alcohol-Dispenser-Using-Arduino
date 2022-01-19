@@ -43,7 +43,7 @@ This section discusses the schematic diagram and how to assemble the circuit of 
 | Trigger | A3           |
 | Echo    | A4           |
 
-![Alt text](images/hc-sr04.PNG?raw=true "HC-SR04 Connection")
+![Alt text](images/hc-sr04.png?raw=true "HC-SR04 Connection")
 
 
 ## Software Requirement
