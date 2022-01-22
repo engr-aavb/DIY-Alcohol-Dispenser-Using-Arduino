@@ -187,7 +187,7 @@ void getDist1(){
 ![Alt text](https://osoyoo.com/wp-content/uploads/2018/09/hc-sr04.png?raw=true "HC-SR04 Function")
 
 
-Here's the complete Arduino Program. You may copy it and save it as `Alcohol_Dispenser.ino`.
+Here's the complete Arduino Program. You may copy it and save it as `Alcohol_Dispenser.ino` in Arduino IDE. The next part of this guide shows the configuration and installation needed to upload Arduino Programs to the boards.
 
 ```c
 //----ULTRASONIC SENSOR CONFIGURATION----//
