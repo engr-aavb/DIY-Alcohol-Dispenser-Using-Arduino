@@ -97,6 +97,7 @@ const int trigPin1 = A3; //Set trigger pin to A3
 const int echoPin1 = A4; //Set echo pin to A4
 float distanceCm1; //Handling the distance in Centimeters
 float duration1; //Handling the time duration of Ultrasonic Frequency
+long prevMillis; //handling time interval for alcohol dispensing
 //------------end of init----------------//
 ```
 > **Variables:**
@@ -104,7 +105,7 @@ float duration1; //Handling the time duration of Ultrasonic Frequency
 > - `const int echoPin1` sets `pin A4` as the echo pin connected to HC-SR04.
 > - `float distanceCm1` handles data for distance measured in centimeters.
 > - `float duration1` handles the time duration of Ultrasonic Frequency to reflect on the sensor.
-
+> - `long prevMillis` handles the time interval for alcohol dispensing
 
 
 3. Inside the `void setup()`, let's initialize the `Serial` for Arduino to show data measured and you may also command the Arduino what to do. Then, you will declare an I/O pin either be `INPUT` or `OUTPUT` using `pinMode`. The `digitalWrite` sets the `pin A0` as logic `HIGH` for the Driver Circuit to turn off the DC Water Pump.
@@ -144,8 +145,11 @@ void loop() {
     }
   }
   
-  if(distanceCm1<=5){
-    pumps();                     // this will be performed when distance from the Ultrasonic Sensor <= 5cm
+  if((millis()-prevMillis)>=1500){ //having 1500ms time interval in alcohol dispensing
+    if(distanceCm1<=8){
+      pumps();                     // this will be performed when distance from the Ultrasonic Sensor <= 8cm
+    }
+    prevMillis=millis();
   }
 }
 ```
@@ -191,6 +195,7 @@ const int trigPin1 = A3; //Set trigger pin to A3
 const int echoPin1 = A4; //Set echo pin to A4
 float distanceCm1; //Handling the distance in Centimeters
 float duration1; //Handling the time duration of Ultrasonic Frequency
+long prevMillis; //handling time interval for alcohol dispensing
 //------------end of init----------------//
 
 void setup() {
@@ -219,8 +224,11 @@ void loop() {
     }
   }
   
-  if(distanceCm1<=5){
-    pumps();                     // this will be performed when distance from the Ultrasonic Sensor <= 5cm
+  if((millis()-prevMillis)>=1500){ //having 1500ms time interval in alcohol dispensing
+    if(distanceCm1<=8){
+      pumps();                     // this will be performed when distance from the Ultrasonic Sensor <= 8cm
+    }
+    prevMillis=millis();
   }
 }
 
