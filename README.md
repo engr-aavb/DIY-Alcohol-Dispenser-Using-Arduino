@@ -10,7 +10,9 @@ On this guide, you will use the [GizDuino SE](https://www.e-gizmo.net/oc/index.p
 
 ### Alcohol Auto Dispenser DIY Starter Kit
 You may get the Alcohol Dispenser Kit on this [link](https://www.e-gizmo.net/oc/index.php?route=product/product&product_id=1505&search=alcohol&description=true).
+
 This kit contains the following components:
+![Alt text](https://www.e-gizmo.net/oc/image/cache/catalog/General/Alcohol%20Kit/211400005-5-450x350h.jpg?raw=true "DIY Alcohol Auto Dispensing Kit")
 - 1x DC Water Pump
 - 1x PVC Tube
 - 1x Adjustable Spray Nozzle
