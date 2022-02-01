@@ -286,7 +286,7 @@ Then, let's set the board into Arduino Uno.
 
 ![Alt text](images/upload.PNG?raw=true "Successfull uploading")
 
-8. You may use the Serial Monitor, by pressing `ctrl + shift + m`, or going to **Tools > Serial Monitor ** to see the actual data reading of HC-SR04. You may now use the `DIY-Alcohol-Auto-Dispenser` by assembling it with an Alcohol Container.
+8. You may use the Serial Monitor, by pressing `ctrl + shift + m`, or going to **Tools > Serial Monitor** to see the actual data reading of HC-SR04. You may now use the `DIY-Alcohol-Auto-Dispenser` by assembling it with an Alcohol Container.
 
 ```
 30.31
